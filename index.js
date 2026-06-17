@@ -87,15 +87,20 @@ button{
 <h1>商品注文ページ</h1>
 
 <form action="/order" method="post">
+<p>
+  <label>お名前</label><br>
+  <input type="text" name="name" class="small-input" required>
+</p>
 
-<label>お名前</label>
-<input type="text" name="name" required>
+<p>
+  <label>メールアドレス</label><br>
+  <input type="email" name="email" class="small-input" required>
+</p>
 
-<label>メールアドレス</label>
-<input type="email" name="email" required>
-
-<label>電話番号</label>
-<input type="tel" name="tel" required>
+<p>
+  <label>電話番号</label><br>
+  <input type="tel" name="tel" class="small-input" required>
+</p>
 
 <div class="products">
 
