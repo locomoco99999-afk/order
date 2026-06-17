@@ -266,7 +266,11 @@ app.post('/order', (req, res) => {
   `);
 });
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+// 環境変数PORTがあればそれを使い、なければローカル用に3000を使う
+const port = process.env.PORT || 3000;
+
+// '0.0.0.0' を指定して外部からの接続を許可するのがポイントです
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port ${port}`);
 });
 
